@@ -5,27 +5,34 @@
 using namespace std;
 
 namespace sdds {
-	unsigned FitnessApp::selection()
+	//Private members
+	bool FitnessApp::confirm(const char* message)
 	{
-		unsigned selectNo{};
-		displayItems();
-		selectNo = ut.validSelection(m_itemNo);
-		return selectNo;
-	}
-	
-	void FitnessApp::displayItems() const
-	{
-
-	}
-
-	void FitnessApp::newWorkout()
-	{
-		std::cout << "Adding New";
+		bool result{};
+		unsigned selection{};
+		Menu newMenu(message);
+		newMenu << "Yes";
+		selection = newMenu.run();
+		selection == 1 ? result = true : result = false;
+		return result;
 	}
 
-	void FitnessApp::trackWorkout()
+	void FitnessApp::load(const char*)
 	{
-		std::cout << "Track Past Records";
+	}
+
+	//Public members
+	FitnessApp::FitnessApp(const char* fName)
+	{
+		m_changed = false;
+		ut.strcpy(m_fileNme, fName);
+		m_workOutsMenu.setTitle("Choose the type of Work-Out:");
+		m_workOutsMenu << "Weight" << "Cardio";
+		m_mainMenu.setTitle("Song's Fitness App");
+		m_mainMenu << "Add New Work-out Records"
+			<< "Track Previous Workout Records";
+		m_exitMenu.setTitle("Changes have been made to the data, what would you like to do?");
+		m_exitMenu << "Save changes and exit" << "Cancel and go back to the main menu";
 	}
 
 	void FitnessApp::run() const
@@ -84,6 +91,6 @@ namespace sdds {
 		std::cout << std::endl;
 		std::cout << "-------------------------------------------" << std::endl;
 		std::cout << "Thanks for using Seneca Library Application" << std::endl;
-		displayPubs();
 	}
+
 }

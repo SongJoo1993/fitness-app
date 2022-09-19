@@ -8,7 +8,6 @@ App Description: Allowing the user to track fitness achievement!
 int main() {
 	std::cout << "hello!";
 	sdds::FitnessApp fApp{};
-
-
+	fApp.run();
 	return 0;
 }

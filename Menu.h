@@ -4,7 +4,7 @@
 #include <iostream>
 
 namespace sdds {
-	const unsigned MAX_MENU_ITEMS = 20;
+	const unsigned MAX_MENU_ITEMS = 10;
 
 	class Menu;
 
@@ -36,15 +36,15 @@ namespace sdds {
 
 		Menu(const Menu& toCopy) = delete;
 		Menu& operator =(const Menu& toAssign) = delete;
-
 		~Menu();
+
 		void displayTitle()const;
 		void displayItems()const;
 		unsigned run();
 		int operator~();
 		Menu& setTitle(const char* title);
 
-		Menu& operator<<(const char* menuitemConent);
+		Menu& operator<<(const char* contentStr);
 		friend std::ostream& operator<<(std::ostream& os, const Menu& M);
 
 		operator int()const;
