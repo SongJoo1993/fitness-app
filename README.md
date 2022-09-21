@@ -17,6 +17,7 @@ Developing a personal fitness application to keep track of physical fitness data
 ```
 
 ## Modules
+```bash
 - FitnessApp
 - Workout
 - WorkoutType
@@ -24,6 +25,7 @@ Developing a personal fitness application to keep track of physical fitness data
 - Cardio
 - Menu
 - Date
+```
 
 ## Data Resource
 - WorkoutRecs.txt
