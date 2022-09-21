@@ -9,10 +9,12 @@ Developing a personal fitness application to keep track of physical fitness data
 - Track previous fitness records
 
 ## Functions
+```bash 
 - View Fitness Records
 - Add Fitness Records
 - Delete Fitness Records
 - Update Fitness Records
+```
 
 ## Modules
 - FitnessApp
