@@ -1,10 +1,10 @@
-#ifndef SDDS_MENU_H__
-#define SDDS_MENU_H__
+#ifndef SDDS_MENU_H
+#define SDDS_MENU_H
 
 #include <iostream>
+#include "FitMacros.h"
 
 namespace sdds {
-	const unsigned MAX_MENU_ITEMS = 10;
 
 	class Menu;
 
@@ -28,7 +28,7 @@ namespace sdds {
 	class Menu {
 	private:
 		char* m_title{};
-		MenuItem* m_items[MAX_MENU_ITEMS]{};
+		MenuItem* m_items[SDDS_MAX_MENU_ITEMS]{};
 		int m_itemNo{};
 	public:
 		Menu();

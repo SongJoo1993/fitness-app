@@ -126,7 +126,7 @@ namespace sdds {
 
 	Menu& Menu::operator<<(const char* contentStr)
 	{
-		if (m_itemNo < MAX_MENU_ITEMS)
+		if (m_itemNo < SDDS_MAX_MENU_ITEMS)
 		{
 			MenuItem* newItem = new MenuItem(contentStr);
 			m_items[m_itemNo++] = newItem;

@@ -1,12 +1,14 @@
 #ifndef SDDS_CARDIO_H
 #define SDDS_CARDIO_H
-#include "Workout.h"
+
+#include "WorkoutType.h"
 
 namespace sdds {
 
-	class Cardio : public Workout {
-
+	class Cardio : public WorkoutType {
+		int c_length{};
 	public:
+
 
 	};
 }

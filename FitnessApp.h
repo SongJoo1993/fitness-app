@@ -15,15 +15,12 @@ namespace sdds {
 		bool confirm(const char* message);
 		void load(const char*);
 		void save();
-		int search(char* mode);
-		void returnPub();
-		void newPublication();
-		void removePublication();
-		void checkOutPub();
+		void newWorkout();
+		void trackWorkout();
 		void displayPubs();
 	public:
 		FitnessApp(const char*);
-		void run() const;
+		void run();
 		~FitnessApp();
 	};
 }

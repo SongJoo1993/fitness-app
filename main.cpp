@@ -6,8 +6,7 @@ App Description: Allowing the user to track fitness achievement!
 #include "FitnessApp.h"
 
 int main() {
-	std::cout << "hello!";
-	sdds::FitnessApp fApp{};
+	sdds::FitnessApp fApp("WorkoutRecs.txt");
 	fApp.run();
 	return 0;
 }

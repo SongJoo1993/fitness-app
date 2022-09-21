@@ -1,0 +1,86 @@
+What features to be needed:
+1. Tracking per day
+- what type of workout 
+- how many sets & reps done on the specific day
+- how much weight per each set done
+- how long I did the cardio
+- Note on improvement
+
+2. How many days worked out per each month
+
+Input Console Example:
+Song's Fitness App
+1. Add New Workout Record
+2. Track Workout Record
+3. Exit
+
+#1
+1. Add New Weight Record
+2. Add New Cardio Record
+3. Exit
+
+#1.
+
+Wokrout name? Bench
+How many sets? 2
+How much weight for the first set? 10
+Numbers of Reps in the first set? 15
+How much weight for the first set? 20
+Numbers of Reps in Second Set? 10
+
+Great Job!
+
+1. Add New Weight Record
+2. Add New Cardio Record
+3. Exit
+
+#2
+
+Cardio Name? Cycle
+How many minutes did you do it? 10
+
+Great Job!
+
+1. Add New Weight Record
+2. Add New Cardio Record
+3. Exit
+
+Input File Example:
+
+WT Bench 
+25p 10 
+35p 10
+
+WT Shoulder
+0p 15
+10p 15
+
+CD Cycle
+15mins
+
+CD Running
+10mins
+
+notes: improved 5 pounds on Bench and Shoulder
+
+* Weight-> title(string), newline, weight(string), numbers(unsigned)
+* Cardio-> title(string), newline, minutes(string)
+* notde -> string
+
+Output Example:
+----Summary of September 25th-----
+-----------Weight Summary-----------
+Type		Weight	 Sets	Reps		
+Bench		25,35 pounds 2	10/10
+Shoulder	0,10 pounds  2	15/15
+-----------Cardio Summary-----------
+Type		Time
+Cycle		15mins
+Running	10mins
+
+Note: improved 5 pounds on Bench and Shoulder
+
+
+
+
+

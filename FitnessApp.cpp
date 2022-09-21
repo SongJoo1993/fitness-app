@@ -19,6 +19,27 @@ namespace sdds {
 
 	void FitnessApp::load(const char*)
 	{
+		
+	}
+
+	void FitnessApp::save()
+	{
+
+	}
+
+	void FitnessApp::newWorkout()
+	{
+
+	}
+
+	void FitnessApp::trackWorkout()
+	{
+
+	}
+
+	void FitnessApp::displayPubs()
+	{
+
 	}
 
 	//Public members
@@ -33,9 +54,10 @@ namespace sdds {
 			<< "Track Previous Workout Records";
 		m_exitMenu.setTitle("Changes have been made to the data, what would you like to do?");
 		m_exitMenu << "Save changes and exit" << "Cancel and go back to the main menu";
+		load(fName);
 	}
 
-	void FitnessApp::run() const
+	void FitnessApp::run()
 	{
 		bool done{};
 		unsigned selection{};
@@ -91,6 +113,10 @@ namespace sdds {
 		std::cout << std::endl;
 		std::cout << "-------------------------------------------" << std::endl;
 		std::cout << "Thanks for using Seneca Library Application" << std::endl;
+	}
+
+	FitnessApp::~FitnessApp()
+	{
 	}
 
 }
