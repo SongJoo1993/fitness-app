@@ -4,14 +4,17 @@
 #include <iostream>
 #include "Menu.h"
 #include "FitMacros.h"
+#include "WorkoutType.h"
 
 namespace sdds {
 	class FitnessApp {
-		bool m_changed{};
-		Menu m_mainMenu{};
-		Menu m_exitMenu{};
-		Menu m_workOutsMenu{};
-		char m_fileNme[SDDS_FILE_NAME_LEN + 1]{};
+		bool f_changed{};
+		Menu f_mainMenu{};
+		Menu f_exitMenu{};
+		Menu f_workOutsMenu{};
+		char f_fileNme[SDDS_FILE_NAME_LEN + 1]{};
+		WorkoutType* f_workouts[SDDS_RECORDS_CAPACITY]{};
+		int f_numOfWorkOuts{};
 		bool confirm(const char* message);
 		void load(const char*);
 		void save();

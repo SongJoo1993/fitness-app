@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include "Utils.h"
 #include "FitnessApp.h"
@@ -17,9 +18,13 @@ namespace sdds {
 		return result;
 	}
 
-	void FitnessApp::load(const char*)
+	void FitnessApp::load(const char* fileName)
 	{
-		
+		std::ifstream fin(fileName);
+		while (fin)
+		{
+			
+		}
 	}
 
 	void FitnessApp::save()
@@ -45,15 +50,15 @@ namespace sdds {
 	//Public members
 	FitnessApp::FitnessApp(const char* fName)
 	{
-		m_changed = false;
-		ut.strcpy(m_fileNme, fName);
-		m_workOutsMenu.setTitle("Choose the type of Work-Out:");
-		m_workOutsMenu << "Weight" << "Cardio";
-		m_mainMenu.setTitle("Song's Fitness App");
-		m_mainMenu << "Add New Work-out Records"
+		f_changed = false;
+		ut.strcpy(f_fileNme, fName);
+		f_workOutsMenu.setTitle("Choose the type of Work-Out:");
+		f_workOutsMenu << "Weight" << "Cardio";
+		f_mainMenu.setTitle("Song's Fitness App");
+		f_mainMenu << "Add New Work-out Records"
 			<< "Track Previous Workout Records";
-		m_exitMenu.setTitle("Changes have been made to the data, what would you like to do?");
-		m_exitMenu << "Save changes and exit" << "Cancel and go back to the main menu";
+		f_exitMenu.setTitle("Changes have been made to the data, what would you like to do?");
+		f_exitMenu << "Save changes and exit" << "Cancel and go back to the main menu";
 		load(fName);
 	}
 
@@ -64,7 +69,7 @@ namespace sdds {
 
 		do
 		{
-			selection = m_mainMenu.run();
+			selection = f_mainMenu.run();
 			switch (selection)
 			{
 			case 0:
@@ -82,8 +87,8 @@ namespace sdds {
 				break;
 			}
 
-			if (m_changed && done == true) {
-				selection = m_exitMenu.run();
+			if (f_changed && done == true) {
+				selection = f_exitMenu.run();
 				if (selection == 1) {
 					save();
 				}
@@ -101,7 +106,7 @@ namespace sdds {
 					}
 				}
 			}
-			else if (!m_changed && done == true) {
+			else if (!f_changed && done == true) {
 				done = true;
 			}
 			else {

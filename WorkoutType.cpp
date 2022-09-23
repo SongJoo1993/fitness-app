@@ -3,6 +3,10 @@
 using namespace std;
 
 namespace sdds {
+	WorkoutType::WorkoutType(const char* name)
+	{
+
+	}
 	void WorkoutType::resetDate()
 	{
 		Date temp{};

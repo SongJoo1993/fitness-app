@@ -2,6 +2,7 @@
 #define SDDS_WORKOUTTYPE_H
 
 #include "Workout.h"
+#include "Weight.h"
 #include "Date.h"
 
 namespace sdds {
@@ -10,14 +11,14 @@ namespace sdds {
 		char* w_name{};
 		Date w_date{};
 	public:
-		WorkoutType(const char* name = nullptr) {};
+		WorkoutType(const char* name = nullptr);
 		void resetDate();
 		Date checkoutDate()const;
 
 		virtual std::ostream& write(std::ostream&)const = 0;
 		virtual std::istream& read(std::istream&) = 0;
-		virtual bool conIO(std::ios&)const;
 		virtual operator bool() const = 0;
+		virtual bool conIO(std::ios&)const;
 		virtual ~WorkoutType();
 	};
 }
