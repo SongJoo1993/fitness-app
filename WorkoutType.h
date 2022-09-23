@@ -2,7 +2,6 @@
 #define SDDS_WORKOUTTYPE_H
 
 #include "Workout.h"
-#include "Weight.h"
 #include "Date.h"
 
 namespace sdds {
@@ -11,7 +10,7 @@ namespace sdds {
 		char* w_name{};
 		Date w_date{};
 	public:
-		WorkoutType(const char* name = nullptr);
+		WorkoutType(const char* name = nullptr) {};
 		void resetDate();
 		Date checkoutDate()const;
 
