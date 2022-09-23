@@ -9,12 +9,15 @@ Developing a personal fitness application to keep track of physical fitness data
 - Track previous fitness records
 
 ## Functions
+```bash 
 - View Fitness Records
 - Add Fitness Records
 - Delete Fitness Records
 - Update Fitness Records
+```
 
 ## Modules
+```bash
 - FitnessApp
 - Workout
 - WorkoutType
@@ -22,6 +25,7 @@ Developing a personal fitness application to keep track of physical fitness data
 - Cardio
 - Menu
 - Date
+```
 
 ## Data Resource
 - WorkoutRecs.txt
